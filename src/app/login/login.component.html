@@ -1,0 +1,19 @@
+
+<app-hello name="{{ name }}"></app-hello>
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <!-- <div formArrayName="arr" *ngFor="let a of myForm.get('arr').controls; let i = index"> -->
+    <!-- <div [formGroupName]="i" style="margin-bottom: 10px;"> -->
+      <label for="username">username:</label>
+      <input type="text" name="username" formControlName="username">
+      <br><br>
+      <label for="password">Password:</label>
+      <input type="text" name="password" formControlName="password">
+    <!-- </div>
+  </div> -->
+  <br>
+  <!-- <button type="button" (click)="addItem()" style="margin-right: 5px;">Add</button> -->
+  <button type="submit">Submit</button>
+  
+  <button type="forgot-password" routerLink="/forgot-password">Forgot Password</button>
+</form>
